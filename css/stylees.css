@@ -1,0 +1,40 @@
+#main {
+  text-align: center;
+  color: whitesmoke;
+  background-image: url(../images/italian-food-background-1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: fit-content;
+  
+
+}
+
+#mainContent {
+  
+  padding: 15%;
+}
+#mainContent h1 {
+  font-family: 'Ultra', serif;
+  font-size: 50px;
+}
+#mainContent p {
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: cornsilk;
+}
+
+.nav-link {
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  color: cornsilk;
+}
+#order {
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+}
+
+#menuHeading h1 {
+  font-family: 'Fredoka One', cursive;
+  padding: 5%
+}
