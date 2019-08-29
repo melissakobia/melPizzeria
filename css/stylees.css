@@ -36,5 +36,27 @@
 
 #menuHeading h1 {
   font-family: 'Fredoka One', cursive;
-  padding: 5%
+  padding: 5%;
+  text-align: center;
+  font-size: 40px;
+  
+}
+#menu {
+  background-image: url(../images/contemporary-china.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: fit-content;
+  text-align: center;
+
+}
+#row2 {
+  padding: 5%;
+}
+
+.btn-outline-warning {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  text-align: center
+  
 }
