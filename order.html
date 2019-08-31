@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Fredoka+One|Heebo|Ultra&display=swap" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/scripts.js"></script>
@@ -34,7 +34,7 @@
             <div class="card-body">
               <h4 class="card-title intro">Large Pizza</h4>
               <p class="card-text">Kshs 1000</p>
-              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalScrollable">SELECT</a>
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#largeModal">SELECT</a>
 
             </div>
           </div>
@@ -42,7 +42,7 @@
             <div class="card-body">
               <h4 class="card-title intro">Small Pizza</h4>
               <p class="card-text">Kshs 500</p>
-              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalScrollable">SELECT</a>
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#smallModal">SELECT</a>
 
             </div>
           </div>
@@ -50,7 +50,7 @@
             <div class="card-body">
               <h4 class="card-title intro">Medium Pizza</h4>
               <p class="card-text">Kshs 700</p>
-              <a class="btn btn-warning" data-toggle="modal" data-target="#exampleModalScrollable">SELECT</a>
+              <a class="btn btn-warning" data-toggle="modal" data-target="#mediumModal">SELECT</a>
 
             </div>
           </div>
@@ -63,22 +63,311 @@
 
       </div>
 
-      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+      <div class="modal fade" id="largeModal" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+              <h2 class="modal-title" id="modalScrollableTitle">Large Pizza</h2>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              ...
+              <form>
+                <div class="row">
+                  <h4>Select your crust: </h4>
+                  <br><br>
+                  <p class="text-muted"> Only select one</p>
+                  <br>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="crispyLarge" class="form-check-input" name="crustLarge" value="crispyLarge">Crispy
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 250</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="stuffedLarge" class="form-check-input" name="crustLarge" value="stuffedLarge">Stuffed
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 250</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="glutenLarge" class="form-check-input" name="crustLarge" value="glutenLarge">Gluten Free
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 250</div>
+                </div>
+                <hr>
+                <h4 class="intro">Select your toppings: </h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="cheeseLarge" class="form-check-input" name="cheeseLarge" value="200">Cheddar cheese
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="mushroomLarge" class="form-check-input" name="mushroomLarge" value="200">Mushrooms
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="pepperroniLarge" class="form-check-input" name="pepperoniLarge" value="200">Pepperoni
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="baconLarge" class="form-check-input" name="baconLarge" value="200">Bacon
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+
+
+              </form>
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-warning">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="modal fade" id="mediumModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="modalScrollableTitle">Medium Pizza</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <h4>Select your crust: </h4>
+                  <br><br>
+                  <p class="text-muted"> Only select one</p>
+                  <br>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="crispyMedium" class="form-check-input" name="crustMedium" value="200">Crispy
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="stuffedMedium" class="form-check-input" name="crustMedium" value="200">Stuffed
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="glutenMedium" class="form-check-input" name="crustMedium" value="150">Gluten Free
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+                <hr>
+                <h4 class="intro">Select your toppings: </h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="cheeseMedium" class="form-check-input" name="cheeseMedium" value="150">Cheddar cheese
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="mushroomMedium" class="form-check-input" name="mushroomMedium" value="150">Mushrooms
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="pepperoniMedium" class="form-check-input" name="pepperoniMedium" value="150">Pepperoni
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="baconMedium" class="form-check-input" name="baconMedium" value="150">Bacon
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+
+
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-warning">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="smallModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="modalScrollableTitle">Small Pizza</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <h4>Select your crust: </h4>
+                  <br><br>
+                  <p class="text-muted"> Only select one</p>
+                  <br>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="crispySmall" class="form-check-input" name="crustSmall" value="150">Crispy
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="stuffedSmall" class="form-check-input" name="crustSmall" value="150">Stuffed
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="radio" id="glutenSmall" class="form-check-input" name="crustSmall" value="150">Gluten Free
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+                <hr>
+                <h4 class="intro">Select your toppings: </h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="cheeseSmall" class="form-check-input" name="cheeseSmall" value="100">Cheddar cheese
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 100</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="mushroomSmall" class="form-check-input" name="mushroomSmall" value="100">Mushrooms
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 100</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="pepperoniSmall" class="form-check-input" name="pepperoniSmall" value="100">Pepperoni
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 100</div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <label class="form-check-label">
+                        <input type="checkbox" id="baconSmall" class="form-check-input" name="baconSmall" value="100">Bacon
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ml-auto">Kshs 100</div>
+                </div>
+
+
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" id="smallBtn" class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
         </div>
