@@ -29,7 +29,7 @@
   font-size: 30px;
   color: cornsilk;
 }
-#order {
+#orderBtn {
   font-family: 'Pacifico', cursive;
   font-size: 25px;
 }
@@ -59,4 +59,49 @@
   font-size: 20px;
   text-align: center
   
+}
+
+#order-top {
+  background-image: url(../images/top-img.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 40vh;
+}
+
+#order-top h1 {
+  font-family: 'Ultra', serif;
+  font-size: 50px;
+  color: whitesmoke;
+
+}
+
+#order-top h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 35px;
+  color: cornsilk;
+}
+
+#large {
+  text-align: center;
+}
+#small {
+  text-align: center;
+}
+#medium {
+  text-align: center;
+}
+
+.btn-warning {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  text-align: center
+}
+.card-title {
+  font-size: 30px;
+  font-family: 'Bree Serif', serif;
+}
+.card-text {
+  font-family: 'Heebo', sans-serif;
+  font-size: 20px;
 }
