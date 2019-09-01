@@ -201,6 +201,28 @@ $(document).ready(function () {
 
   });
 
+  $("button#delivery").click(function (event) {
+    event.preventDefault();
+    var confirmation = confirm("You will incur an additional Kshs 300 for delivery ");
+    
+    if (confirmation === true) {
+      var totalAmount = 300 + grandTotal();
+      var name = prompt("Enter your name : ");
+      var address = prompt("Enter your address : ");
+      alert("Thank you " + name + " your order will be delivered at " + address + "." );
+      $("#showTotal").show();
+      $("#totalPay").text("Kshs " + totalAmount);
+
+      
+      
+    } 
+    else if (confirmation === false) {
+      alert("Please select another option");
+
+    }
+
+  });
+
 
 
 
