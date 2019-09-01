@@ -10,11 +10,11 @@
   <link href="css/stylees.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Pacifico|Ultra&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Fredoka+One|Heebo|Ultra&display=swap" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
   <title>MEL'S PIZZERIA</title>
 </head>
@@ -89,7 +89,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="newLargeOrder">
                 <div class="row">
                   <h4>Select your crust: </h4>
                   <br><br>
@@ -98,8 +98,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="crispyLarge" class="form-check-input" name="crustLarge"
-                          value="crispyLarge">Crispy
+                        <input type="radio" id="crispyLarge" class="form-check-input" name="crust"
+                          value="Crispy">Crispy
                       </label>
                     </div>
                   </div>
@@ -110,8 +110,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="stuffedLarge" class="form-check-input" name="crustLarge"
-                          value="stuffedLarge">Stuffed
+                        <input type="radio" id="stuffedLarge" class="form-check-input" name="crust"
+                          value="Stuffed">Stuffed
                       </label>
                     </div>
                   </div>
@@ -122,8 +122,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="glutenLarge" class="form-check-input" name="crustLarge"
-                          value="glutenLarge">Gluten Free
+                        <input type="radio" id="gluttenLarge" class="form-check-input" name="crust"
+                          value="Glutten">Gluten Free
                       </label>
                     </div>
                   </div>
@@ -135,8 +135,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="cheeseLarge" class="form-check-input" name="cheeseLarge"
-                          value="200">Cheddar cheese
+                        <input type="checkbox" id="cheeseLarge" class="form-check-input" name="topping"
+                          value="Cheese">Cheddar cheese
                       </label>
                     </div>
                   </div>
@@ -146,8 +146,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="mushroomLarge" class="form-check-input" name="mushroomLarge"
-                          value="200">Mushrooms
+                        <input type="checkbox" id="mushroomLarge" class="form-check-input" name="topping"
+                          value="Mushroom">Mushrooms
                       </label>
                     </div>
                   </div>
@@ -157,8 +157,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="pepperroniLarge" class="form-check-input" name="pepperoniLarge"
-                          value="200">Pepperoni
+                        <input type="checkbox" id="pepperoniLarge" class="form-check-input" name="topping"
+                          value="Pepperoni">Pepperoni
                       </label>
                     </div>
                   </div>
@@ -168,12 +168,18 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="baconLarge" class="form-check-input" name="baconLarge"
-                          value="200">Bacon
+                        <input type="checkbox" id="baconLarge" class="form-check-input" name="topping"
+                          value="Bacon">Bacon
                       </label>
                     </div>
                   </div>
                   <div class="col-md-3 ml-auto">Kshs 200</div>
+                </div>
+
+                <hr>
+                <div class="form-group">
+                  <label for="pizzaNumber">Number of Pizzas : </label>
+                  <input type="number" id="pizzaNumber1" class="form-control" required>
                 </div>
 
 
@@ -182,7 +188,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-warning">Add to Cart</button>
+              <button type="submit" id="largebtn" class="btn btn-warning" data-dismiss="modal">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -209,8 +215,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="crispyMedium" class="form-check-input" name="crustMedium"
-                          value="200">Crispy
+                        <input type="radio" id="crispyMedium" class="form-check-input" name="crust"
+                          value="Crispy">Crispy
                       </label>
                     </div>
                   </div>
@@ -221,8 +227,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="stuffedMedium" class="form-check-input" name="crustMedium"
-                          value="200">Stuffed
+                        <input type="radio" id="stuffedMedium" class="form-check-input" name="crust"
+                          value="Stuffed">Stuffed
                       </label>
                     </div>
                   </div>
@@ -233,8 +239,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="glutenMedium" class="form-check-input" name="crustMedium"
-                          value="150">Gluten Free
+                        <input type="radio" id="glutenMedium" class="form-check-input" name="crust"
+                          value="Glutten Free">Gluten Free
                       </label>
                     </div>
                   </div>
@@ -246,8 +252,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="cheeseMedium" class="form-check-input" name="cheeseMedium"
-                          value="150">Cheddar cheese
+                        <input type="checkbox" id="cheeseMedium" class="form-check-input" name="topping"
+                          value="Cheddar cheese">Cheddar cheese
                       </label>
                     </div>
                   </div>
@@ -257,8 +263,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="mushroomMedium" class="form-check-input" name="mushroomMedium"
-                          value="150">Mushrooms
+                        <input type="checkbox" id="mushroomMedium" class="form-check-input" name="topping"
+                          value="Mushrooms">Mushrooms
                       </label>
                     </div>
                   </div>
@@ -268,8 +274,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="pepperoniMedium" class="form-check-input" name="pepperoniMedium"
-                          value="150">Pepperoni
+                        <input type="checkbox" id="pepperoniMedium" class="form-check-input" name="topping"
+                          value="Pepperoni">Pepperoni
                       </label>
                     </div>
                   </div>
@@ -279,12 +285,17 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="baconMedium" class="form-check-input" name="baconMedium"
-                          value="150">Bacon
+                        <input type="checkbox" id="baconMedium" class="form-check-input" name="topping"
+                          value="Bacon">Bacon
                       </label>
                     </div>
                   </div>
                   <div class="col-md-3 ml-auto">Kshs 150</div>
+                </div>
+                <hr>
+                <div class="form-group">
+                  <label for="pizzaNumber">Number of Pizzas : </label>
+                  <input type="number" id="pizzaNumber2" class="form-control pizzaNumber">
                 </div>
 
 
@@ -293,7 +304,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-warning">Add to Cart</button>
+              <button type="submit" id="mediumBtn" class="btn btn-warning" data-dismiss="modal">ADD TO CART</button>
             </div>
           </div>
         </div>
@@ -396,6 +407,11 @@
                   </div>
                   <div class="col-md-3 ml-auto">Kshs 100</div>
                 </div>
+                <hr>
+                <div class="form-group">
+                  <label for="pizzaNumber">Number of Pizzas : </label>
+                  <input type="number" class="form-control pizzaNumber">
+                </div>
 
 
               </form>
@@ -416,18 +432,18 @@
       <div class="row">
         <div class="col-md-6">
           <h2>Orders</h2>
-          <ul id="newOrders">
+          <ol id="newOrdersList">
 
-          </ul>
+          </ol>
 
         </div>
         <div id="showOrders" class="col-md-6 jumbotron">
-          <h2></h2>
-          <p>Pizza size : <span class="size"></span></p>
-          <p>Pizza crust : <span class="crust"></span></p>
-          <p>Pizza toppings : <span class="toppings"></span></p>
-          <p>Number of pizzas orderd : <span class="number"></span></p>
-          <p>Total amount : <span class="total"></span></p>
+          <h2>Large Pizza</h2>
+          
+          <p>Pizza crust : <span id="crustOrdered"></span></p>
+          <p>Pizza toppings : <span id="toppingsOrdered"></span></p>
+          <p>Number of pizzas ordered : <span id="numberOrdered"></span></p>
+          <p>Total amount : <span id="totalPrice"></span></p>
 
         </div>
 
