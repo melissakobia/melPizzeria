@@ -97,11 +97,79 @@
   font-size: 20px;
   text-align: center
 }
+
 .card-title {
   font-size: 30px;
   font-family: 'Bree Serif', serif;
 }
+
 .card-text {
   font-family: 'Heebo', sans-serif;
   font-size: 20px;
+}
+
+#orderNav {
+  float: right;
+  padding-right: 5%;
+}
+
+#showOrders {
+  display: none;
+  padding: 5%;
+}
+
+.myOrders{
+  cursor: pointer;
+
+}
+
+.myOrders:hover {
+  text-decoration: underline;
+}  
+
+.myOrders2{
+  cursor: pointer;
+
+}
+
+.myOrders2:hover {
+  text-decoration: underline;
+}  
+
+.myOrders3{
+  cursor: pointer;
+
+}
+
+.myOrders3:hover {
+  text-decoration: underline;
+} 
+
+#pickUp {
+  float: right;
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+#showTotal {
+  text-align: center;
+  display: none;
+}
+#orderHeading {
+  font-family: 'Fredoka One', cursive;
+  padding: 5%;
+  text-align: center;
+  font-size: 40px;
+
+}
+
+#cart h2 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+#cart {
+  padding: 5%;
 }
