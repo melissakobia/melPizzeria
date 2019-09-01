@@ -1,3 +1,5 @@
+//Business logic
+
 function Order(crust, topping, number) {
   this.crust = crust;
   this.topping = topping;
@@ -124,6 +126,8 @@ $(document).ready(function () {
       $("#totalPrice").text("Kshs  " + total);
     });
 
+    $('#newLargeOrder')[0].reset();
+
 
 
   });
@@ -161,6 +165,8 @@ $(document).ready(function () {
       $("#totalPrice").text("Kshs  " + total);
     });
 
+    $('#mediumForm')[0].reset();
+
 
 
   });
@@ -196,6 +202,8 @@ $(document).ready(function () {
       $("#numberOrdered").text(newOrder.number);
       $("#totalPrice").text("Kshs  " + total);
     });
+
+    $('#smallForm')[0].reset();
 
 
 
