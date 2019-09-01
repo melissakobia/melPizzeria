@@ -240,7 +240,7 @@
                     <div class="form-check">
                       <label class="form-check-label">
                         <input type="radio" id="glutenMedium" class="form-check-input" name="crust"
-                          value="Glutten Free">Gluten Free
+                          value="Glutten Free">Glutten Free
                       </label>
                     </div>
                   </div>
@@ -330,8 +330,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="crispySmall" class="form-check-input" name="crustSmall"
-                          value="150">Crispy
+                        <input type="radio" id="crispySmall" class="form-check-input" name="crust"
+                          value="Crispy">Crispy
                       </label>
                     </div>
                   </div>
@@ -342,8 +342,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="stuffedSmall" class="form-check-input" name="crustSmall"
-                          value="150">Stuffed
+                        <input type="radio" id="stuffedSmall" class="form-check-input" name="crust"
+                          value="Stuffed">Stuffed
                       </label>
                     </div>
                   </div>
@@ -354,8 +354,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="glutenSmall" class="form-check-input" name="crustSmall"
-                          value="150">Gluten Free
+                        <input type="radio" id="glutenSmall" class="form-check-input" name="crust"
+                          value="Glutten Free">Gluten Free
                       </label>
                     </div>
                   </div>
@@ -367,8 +367,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="cheeseSmall" class="form-check-input" name="cheeseSmall"
-                          value="100">Cheddar cheese
+                        <input type="checkbox" id="cheeseSmall" class="form-check-input" name="topping"
+                          value="Cheddar cheese">Cheddar cheese
                       </label>
                     </div>
                   </div>
@@ -378,8 +378,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="mushroomSmall" class="form-check-input" name="mushroomSmall"
-                          value="100">Mushrooms
+                        <input type="checkbox" id="mushroomSmall" class="form-check-input" name="topping"
+                          value="Mushrooms">Mushrooms
                       </label>
                     </div>
                   </div>
@@ -389,8 +389,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="pepperoniSmall" class="form-check-input" name="pepperoniSmall"
-                          value="100">Pepperoni
+                        <input type="checkbox" id="pepperoniSmall" class="form-check-input" name="topping"
+                          value="Pepperoni">Pepperoni
                       </label>
                     </div>
                   </div>
@@ -400,8 +400,8 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="checkbox" id="baconSmall" class="form-check-input" name="baconSmall"
-                          value="100">Bacon
+                        <input type="checkbox" id="baconSmall" class="form-check-input" name="topping"
+                          value="Bacon">Bacon
                       </label>
                     </div>
                   </div>
@@ -410,7 +410,7 @@
                 <hr>
                 <div class="form-group">
                   <label for="pizzaNumber">Number of Pizzas : </label>
-                  <input type="number" class="form-control pizzaNumber">
+                  <input type="number" id="pizzaNumber3" class="form-control pizzaNumber">
                 </div>
 
 
@@ -419,7 +419,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" id="smallBtn" class="btn btn-warning">Add to Cart</button>
+              <button type="submit" id="smallBtn" class="btn btn-warning" data-dismiss="modal">Add to Cart</button>
             </div>
           </div>
         </div>
@@ -431,14 +431,20 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h2>Orders</h2>
+          <h2>CHECKOUT</h2>
           <ol id="newOrdersList">
 
           </ol>
+          <br><br>
+          <hr>
+
+          <button type="submit" id="delivery" class="btn btn-warning">DELIVERY</button> 
+          <button type="submit" id="pickUp" class="btn btn-primary">PICK UP AT SHOP</button>
+          <hr>
 
         </div>
         <div id="showOrders" class="col-md-6 jumbotron">
-          <h2>Large Pizza</h2>
+          <h2></h2>
           
           <p>Pizza crust : <span id="crustOrdered"></span></p>
           <p>Pizza toppings : <span id="toppingsOrdered"></span></p>
