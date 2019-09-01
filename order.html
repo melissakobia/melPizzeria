@@ -98,8 +98,7 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="crispyLarge" class="form-check-input" name="crust"
-                          value="Crispy">Crispy
+                        <input type="radio" id="crispyLarge" class="form-check-input" name="crust" value="Crispy">Crispy
                       </label>
                     </div>
                   </div>
@@ -330,8 +329,7 @@
                   <div class="col-md-6">
                     <div class="form-check">
                       <label class="form-check-label">
-                        <input type="radio" id="crispySmall" class="form-check-input" name="crust"
-                          value="Crispy">Crispy
+                        <input type="radio" id="crispySmall" class="form-check-input" name="crust" value="Crispy">Crispy
                       </label>
                     </div>
                   </div>
@@ -438,14 +436,14 @@
           <br><br>
           <hr>
 
-          <button type="submit" id="delivery" class="btn btn-warning">DELIVERY</button> 
+          <button type="submit" id="delivery" class="btn btn-warning">DELIVERY</button>
           <button type="submit" id="pickUp" class="btn btn-primary">PICK UP AT SHOP</button>
           <hr>
 
         </div>
         <div id="showOrders" class="col-md-6 jumbotron">
           <h2></h2>
-          
+
           <p>Pizza crust : <span id="crustOrdered"></span></p>
           <p>Pizza toppings : <span id="toppingsOrdered"></span></p>
           <p>Number of pizzas ordered : <span id="numberOrdered"></span></p>
@@ -455,7 +453,26 @@
 
       </div>
 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div id="showTotal" class="card shadow p-4 mb-4 bg-white">
+              <div class="card-body">
+                <h4 class="card-title intro">TOTAL AMOUNT</h4>
+                <p class="card-text"><span id="totalPay"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+
+
+      </div>
+
     </div>
+
+
 
   </div>
 
