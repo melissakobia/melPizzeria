@@ -23,7 +23,7 @@ function grandTotal() {
   return total;
 }
 
-Order.prototype.crustLarge = function(crust) {
+Order.prototype.crustLargePrice = function(crust) {
   if (crust === "crispyLarge" || crust === "stuffedLarge" || crust === "gluttenLarge") {
     return crustAmount = 250;
     
@@ -33,7 +33,7 @@ Order.prototype.crustLarge = function(crust) {
   }
 }
 
-Order.prototype.toppingLarge = function(topping){
+Order.prototype.toppingLargePrice = function(topping){
   if (topping === "cheeseLarge" || topping === "mushroomLarge" || topping === "baconLarge") {
     return toppingAmount = 200;
     
@@ -46,6 +46,38 @@ Order.prototype.toppingLarge = function(topping){
 
 
 //User Interface logic
+
+$(document).ready(function () {
+
+  $("button#largebtn").click(function (event) {
+
+    event.preventDefault();
+    
+    var newOrder = new Order(inputCrust, inputToppings, inputNumber);
+    var inputCrust = $("input:radio[name = crust]:checked").val();
+    var inputToppings = $("input:checkbox[name = topping]:checked").val();
+    var inputNumber = parseInt($("input#pizzaNumber1").val());
+
+    var pizzaPrice = sizePrice.large;
+    var crustPrice = newOrder.crustLargePrice(inputCrust);
+    var toppingPrice = newOrder.toppingLargePrice(inputToppings);
+    var total = (pizzaPrice + crustPrice + toppingPrice) * inputNumber; 
+    //alert(total); 
+
+    
+
+    $("ol#newOrdersList").append("<li> <span id='myOrders'>" + " Large Pizza   " + total + "Ksh" + "</span></li>");
+
+
+
+  });
+
+
+
+
+
+
+});
 
 
 
