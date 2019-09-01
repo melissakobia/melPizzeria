@@ -37,10 +37,13 @@
 
     </div>
     <div class="container">
+      <div class="container">
+        <h3 class="intro">Select the size of pizza you would like to order:</h3>
+
+      </div>
       <div class="row">
-        <div class="col-md 6">
-          <h3 class="intro">Select the size of pizza you would like to order:</h3>
-          <div class="card" id="large">
+        <div class="col-md 4">
+          <div class="card shadow p-4 mb-4 bg-white" id="large">
             <div class="card-body">
               <h4 class="card-title intro">Large Pizza</h4>
               <p class="card-text">Kshs 1000</p>
@@ -48,15 +51,10 @@
 
             </div>
           </div>
-          <div class="card" id="small">
-            <div class="card-body">
-              <h4 class="card-title intro">Small Pizza</h4>
-              <p class="card-text">Kshs 500</p>
-              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#smallModal">SELECT</a>
+        </div>
 
-            </div>
-          </div>
-          <div class="card" id="medium">
+        <div class="col-md-4">
+          <div class="card shadow p-4 mb-4 bg-white" id="medium">
             <div class="card-body">
               <h4 class="card-title intro">Medium Pizza</h4>
               <p class="card-text">Kshs 700</p>
@@ -64,12 +62,19 @@
 
             </div>
           </div>
-
-
         </div>
-        <div class="col-md-6">
 
+        <div class="col-md-4">
+          <div class="card shadow p-4 mb-4 bg-white" id="small">
+            <div class="card-body">
+              <h4 class="card-title intro">Small Pizza</h4>
+              <p class="card-text">Kshs 500</p>
+              <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#smallModal">SELECT</a>
+
+            </div>
+          </div>
         </div>
+
 
       </div>
 
@@ -404,6 +409,29 @@
         </div>
       </div>
 
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Orders</h2>
+          <ul id="newOrders">
+
+          </ul>
+
+        </div>
+        <div id="showOrders" class="col-md-6 jumbotron">
+          <h2></h2>
+          <p>Pizza size : <span class="size"></span></p>
+          <p>Pizza crust : <span class="crust"></span></p>
+          <p>Pizza toppings : <span class="toppings"></span></p>
+          <p>Number of pizzas orderd : <span class="number"></span></p>
+          <p>Total amount : <span class="total"></span></p>
+
+        </div>
+
+      </div>
 
     </div>
 
