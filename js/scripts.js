@@ -24,7 +24,7 @@ function grandTotal() {
 }
 
 Order.prototype.crustLargePrice = function(crust) {
-  if (crust === "crispyLarge" || crust === "stuffedLarge" || crust === "gluttenLarge") {
+  if (crust === "Crispy" || crust === "Stuffed" || crust === "Glutten") {
     return crustAmount = 250;
     
   } else {
@@ -34,8 +34,29 @@ Order.prototype.crustLargePrice = function(crust) {
 }
 
 Order.prototype.toppingLargePrice = function(topping){
-  if (topping === "cheeseLarge" || topping === "mushroomLarge" || topping === "baconLarge") {
+  if (topping === "Cheese" || topping === "Mushroom" || topping === "Pepperoni" || topping === "Bacon") {
     return toppingAmount = 200;
+    
+  } else {
+    alert("Please select the toppings you would like");
+    
+  }
+
+}
+
+Order.prototype.crustMediumPrice = function(crust) {
+  if (crust === "Crispy" || crust === "Stuffed" || crust === "Glutten Free") {
+    return crustAmount = 200;
+    
+  } else {
+    alert("Please select the crust");
+    
+  }
+}
+
+Order.prototype.toppingMediumPrice = function(topping){
+  if (topping === "Cheddar cheese" || topping === "Mushrooms" || topping === "Pepperoni" || topping === "Bacon") {
+    return toppingAmount = 150;
     
   } else {
     alert("Please select the toppings you would like");
@@ -53,10 +74,11 @@ $(document).ready(function () {
 
     event.preventDefault();
     
-    var newOrder = new Order(inputCrust, inputToppings, inputNumber);
+    
     var inputCrust = $("input:radio[name = crust]:checked").val();
     var inputToppings = $("input:checkbox[name = topping]:checked").val();
     var inputNumber = parseInt($("input#pizzaNumber1").val());
+    var newOrder = new Order(inputCrust, inputToppings, inputNumber);
 
     var pizzaPrice = sizePrice.large;
     var crustPrice = newOrder.crustLargePrice(inputCrust);
@@ -66,11 +88,60 @@ $(document).ready(function () {
 
     
 
-    $("ol#newOrdersList").append("<li> <span id='myOrders'>" + " Large Pizza   " + total + "Ksh" + "</span></li>");
+    $("ol#newOrdersList").append("<li> <span class='myOrders'>" + " Large Pizza   " + total + "Ksh" + "</span></li>");
+
+    pricing.push(total);
+
+    $(".myOrders").last().click(function () {
+      $("#showOrders").show();
+      $("#crustOrdered").text(newOrder.crust);
+      $("#toppingsOrdered").text(newOrder.topping);
+      $("#numberOrdered").text(newOrder.number);
+      $("#totalPrice").text("Kshs  " + total);
+    });
 
 
 
   });
+
+  //Medium pizza
+
+  $("button#mediumBtn").click(function (event) {
+
+    event.preventDefault();
+    
+    
+    var inputCrust = $("input:radio[name = crust]:checked").val();
+    var inputToppings = $("input:checkbox[name = topping]:checked").val();
+    var inputNumber = parseInt($("input#pizzaNumber2").val());
+    var newOrder = new Order(inputCrust, inputToppings, inputNumber);
+
+    var pizzaPrice = sizePrice.medium;
+    var crustPrice = newOrder.crustMediumPrice(inputCrust);
+    var toppingPrice = newOrder.toppingMediumPrice(inputToppings);
+    var total = (pizzaPrice + crustPrice + toppingPrice) * inputNumber; 
+    //alert(total); 
+
+    
+
+    $("ol#newOrdersList").append("<li> <span class='myOrders2'>" + " Medium Pizza   " + total + "Ksh" + "</span></li>");
+
+    pricing.push(total);
+
+    $(".myOrders2").last().click(function () {
+      $("#showOrders").show();
+      $("#crustOrdered").text(newOrder.crust);
+      $("#toppingsOrdered").text(newOrder.topping);
+      $("#numberOrdered").text(newOrder.number);
+      $("#totalPrice").text("Kshs  " + total);
+    });
+
+
+
+  });
+
+
+
 
 
 
