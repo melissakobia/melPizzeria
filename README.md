@@ -29,7 +29,7 @@ As a user of the website you will be able to:
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 |Page loads	                           |   User selects the item they would like to order through the form                            |       Displays an order summary  |                        |
       
-|Delivery button selected                           |   User enters their name and location                            |       An alert showing their name and location is displayed and the grand total |                        |
+
 
 
 ### Installing

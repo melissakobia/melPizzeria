@@ -37,7 +37,7 @@
 
     </div>
     <div class="container">
-      <div class="container">
+      <div id="orderHeading" class="container">
         <h3 class="intro">Select the size of pizza you would like to order:</h3>
 
       </div>
@@ -205,7 +205,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="mediumForm">
                 <div class="row">
                   <h4>Select your crust: </h4>
                   <br><br>
@@ -320,7 +320,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="smallForm">
                 <div class="row">
                   <h4>Select your crust: </h4>
                   <br><br>
@@ -428,12 +428,12 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div id="cart" class="col-md-6 jumbotron shadow-sm p-4 mb-4">
           <h2>CHECKOUT</h2>
           <ol id="newOrdersList">
 
           </ol>
-          <br><br>
+          <br>
           <hr>
 
           <button type="submit" id="delivery" class="btn btn-warning">DELIVERY</button>
@@ -441,7 +441,7 @@
           <hr>
 
         </div>
-        <div id="showOrders" class="col-md-6 jumbotron">
+        <div id="showOrders" class="col-md-6 jumbotron shadow-sm p-4 mb-4">
           <h2></h2>
 
           <p>Pizza crust : <span id="crustOrdered"></span></p>
