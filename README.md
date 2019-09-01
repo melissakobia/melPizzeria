@@ -28,7 +28,7 @@ As a user of the website you will be able to:
 |Behaviour 	           |    Input 	                 |       Output          |
 |----------------------------------------------|:-----------------------------------:|-----------------------------:|       
 |Page loads	                           |   User selects the item they would like to order through the form                            |       Displays an order summary  |                        |
-|----------------------------------------------|:-----------------------------------:|-----------------------------:|       
+      
 |Delivery button selected                           |   User enters their name and location                            |       An alert showing their name and location is displayed and the grand total |                        |
 
 
@@ -56,7 +56,7 @@ To run the website, you'll have to open the index.thml file with a browser of yo
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md)  file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENCE.md)  file for details.
 
 ## Acknowledgments
 This project was created by Melissa Kobia. An upcoming developer.
