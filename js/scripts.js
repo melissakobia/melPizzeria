@@ -65,6 +65,29 @@ Order.prototype.toppingMediumPrice = function(topping){
 
 }
 
+Order.prototype.crustSmallPrice = function(crust) {
+  if (crust === "Crispy" || crust === "Stuffed" || crust === "Glutten Free") {
+    return crustAmount = 150;
+    
+  } else {
+    alert("Please select the crust");
+    
+  }
+}
+
+Order.prototype.toppingSmallPrice = function(topping){
+  if (topping === "Cheddar cheese" || topping === "Mushrooms" || topping === "Pepperoni" || topping === "Bacon") {
+    return toppingAmount = 100;
+    
+  } else {
+    alert("Please select the toppings you would like");
+    
+  }
+
+}
+
+
+
 
 //User Interface logic
 
@@ -94,6 +117,7 @@ $(document).ready(function () {
 
     $(".myOrders").last().click(function () {
       $("#showOrders").show();
+      $("#showOrders h2").text("Large Pizza");
       $("#crustOrdered").text(newOrder.crust);
       $("#toppingsOrdered").text(newOrder.topping);
       $("#numberOrdered").text(newOrder.number);
@@ -130,6 +154,7 @@ $(document).ready(function () {
 
     $(".myOrders2").last().click(function () {
       $("#showOrders").show();
+      $("#showOrders h2").text("Medium Pizza");
       $("#crustOrdered").text(newOrder.crust);
       $("#toppingsOrdered").text(newOrder.topping);
       $("#numberOrdered").text(newOrder.number);
@@ -139,6 +164,44 @@ $(document).ready(function () {
 
 
   });
+
+//Small Pizza
+  $("button#smallBtn").click(function (event) {
+
+    event.preventDefault();
+    
+    
+    var inputCrust = $("input:radio[name = crust]:checked").val();
+    var inputToppings = $("input:checkbox[name = topping]:checked").val();
+    var inputNumber = parseInt($("input#pizzaNumber3").val());
+    var newOrder = new Order(inputCrust, inputToppings, inputNumber);
+
+    var pizzaPrice = sizePrice.small;
+    var crustPrice = newOrder.crustSmallPrice(inputCrust);
+    var toppingPrice = newOrder.toppingSmallPrice(inputToppings);
+    var total = (pizzaPrice + crustPrice + toppingPrice) * inputNumber; 
+    //alert(total); 
+
+    
+
+    $("ol#newOrdersList").append("<li> <span class='myOrders3'>" + " Small Pizza   " + total + "Ksh" + "</span></li>");
+
+    pricing.push(total);
+
+    $(".myOrders3").last().click(function () {
+      $("#showOrders").show();
+      $("#showOrders h2").text("Small Pizza");
+      $("#crustOrdered").text(newOrder.crust);
+      $("#toppingsOrdered").text(newOrder.topping);
+      $("#numberOrdered").text(newOrder.number);
+      $("#totalPrice").text("Kshs  " + total);
+    });
+
+
+
+  });
+
+
 
 
 
