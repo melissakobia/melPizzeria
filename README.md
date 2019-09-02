@@ -34,7 +34,7 @@ As a user of the website you will be able to:
 
 ### Installing
 
-*** To view the app.Visit -> 
+*** To view the app.Visit ->  https://melissakobia.github.io/melPizzeria/
 * Step 1:
 Clone this repo: git clone https://github.com/melissakobia/melPizzeria.git
 * Step 2:
